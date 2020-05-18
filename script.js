@@ -1,1 +1,6 @@
-const n = 1;
+d3.select("body")
+    .append("svg")
+    .append("rect")
+    .attr("width", 50)
+    .attr("height", 200)
+    .style("fill", "red");
