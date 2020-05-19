@@ -99,9 +99,10 @@ const data = [
 ];
 
 
-const margin = {top: 20, right: 90, bottom: 30, left: 90},
-    width = 1200 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+// const margin = {top: 20, right: 90, bottom: 30, left: 90},
+//     width = 1200 - margin.left - margin.right,
+//     height = 300 - margin.top - margin.bottom;
+const width = 1200, height = 300;
 
 
 const treemap = d3.tree().size([height, width]);
@@ -129,15 +130,22 @@ function fillTable() {
         tr.appendChild(td_Children_id);
         tbody.appendChild(tr);
     });
-    console.log(tbody);
 }
+
+//
+// const svg = d3.select(".wrapper").append("svg")
+//     .attr("width", width + margin.right + margin.left)
+//     .attr("height", height + margin.top + margin.bottom)
+//     .append("g")
+//     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
 const svg = d3.select(".wrapper").append("svg")
-    .attr("width", width + margin.right + margin.left)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width)
+    .attr("height", height)
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
 let i = 0;
 
